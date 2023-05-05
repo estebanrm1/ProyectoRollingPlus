@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- cdn bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- cdn animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- cdn bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <link rel="icon" type="image/x-icon" href="./rollingPlus.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rolling Plus</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/Rolling+.svg" alt="Logo Rolling+" width="75px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link link-light active">
+                <i class="bi bi-house-door-fill"></i> Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="#" id="boton-buscar">
+                <i class="bi bi-search"></i> Búsqueda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="pages/error404.html">
+                <i class="bi bi-plus-lg"></i> Mi Lista
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="pages/originales.html">
+                <i class="bi bi-star-fill"></i> Originales
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="pages/peliculas.html">
+                <i class="bi bi-camera-reels-fill"></i> Películas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="pages/series.html">
+                <i class="bi bi-display"></i> Series
+              </a>
+            </li>
+          </ul>
+          <a href="pages/login.html" class="p-2">
+            <button class="btn btn-indigo">Iniciar sesion</button>
+          </a>
+          <a href="pages/suscripcion.html" class="p-2">
+            <button class="btn btn-indigo">Suscribirse</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid animate animate__backInDown px-0" id="barra-busqueda">
+      <input id="input-busqueda" class="form-control form-control-lg text-start" type="text"
+        placeholder="Buscar por título, personaje o género" aria-label=".form-control-lg example">
+    </div>
+  </header>
+  <main class="fondo-pagina-principal">
+    <div class="container-fluid">
+      <section id="carouselPeliculasPrincipales" class="carousel slide p-3">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselPeliculasPrincipales" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselPeliculasPrincipales" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselPeliculasPrincipales" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselPeliculasPrincipales" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <a href="pages/detalle-pelicula.html">
+              <img src="img/carousel-main-1.jpg" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <img src="img/carousel-main-2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carousel-main-3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <a href="pages/serie-detalle.html">
+              <img src="img/carousel-main-4.jpg" class="d-block w-100" alt="...">
+            </a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPeliculasPrincipales"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPeliculasPrincipales"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+      
+      <section class="categorias">
+        <div class="row d-flex justify-content-center">
+          <aside class="col-md-2 col-4 p-3">
+            <a href="pages/error404.html">
+            <video src="video/1564674844-disney.mp4" class="img-fluid rounded" onmouseover="this.play()"
+              onmouseout="this.pause();this.currentTime=0;"></video>
+            <div class="sobreponer">
+              <img src="img/disney-logo.png" class="img-fluid w-75" alt="">
+            </div>
+            </a>
+          </aside>
+          <aside class="col-md-2 col-4 p-3">
+            <a href="pages/error404.html">
+            <video src="video/1564676714-pixar.mp4" class="img-fluid rounded" onmouseover="this.play()"
+              onmouseout="this.pause();this.currentTime=0;"></video>
+            <div class="sobreponer">
+              <img src="img/pixar-logo.png" class="img-fluid w-75" alt="">
+            </div>
+            </a>
+          </aside>
+          <aside class="col-md-2 col-4 p-3">
+            <a href="pages/error404.html">
+            <video src="video/1564676115-marvel.mp4" class="img-fluid rounded" onmouseover="this.play()"
+              onmouseout="this.pause();this.currentTime=0;"></video>
+            <div class="sobreponer">
+              <img src="img/marvel-logo.png" class="img-fluid w-75" alt="">
+            </div>
+            </a>
+          </aside>
+          <aside class="col-md-2 col-4 p-3">
+            <a href="pages/error404.html">
+            <video src="video/1608229455-star-wars.mp4" class="img-fluid rounded" onmouseover="this.play()"
+              onmouseout="this.pause();this.currentTime=0;"></video>
+            <div class="sobreponer">
+              <img src="img/star-wars-logo.png" class="img-fluid w-75" alt="">
+            </div>
+          </a>
+          </aside>
+          <aside class="col-md-2 col-4 p-3">
+            <a href="pages/error404.html">
+            <video src="video/1564676296-national-geographic.mp4" class="img-fluid rounded" onmouseover="this.play()"
+              onmouseout="this.pause();this.currentTime=0;"></video>
+            <div class="sobreponer">
+              <img src="img/national-geographic-logo.png" class="img-fluid w-75" alt="">
+            </div>
+          </a>
+          </aside>
+        </div>
+      </section>
+      <!-- recomendaciones -->
+      <section class="Sugerencia">
+        <div class="container my-3">
+          <h2 class="text-light">Películas Sugeridas</h2>
+          <div class="row mx-auto my-auto justify-content-center">
+            <div id="peliculasSugeridasCarousel" class="carousel" data-bs-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="img/era del hielo.jpg" alt="portada de la pelicula la era del hielo"
+                          class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="img/spiderman.jpg" alt="portada de la pelicula spiderman
+                        " class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="img/los simpson.jpg" alt="portada de la pelicula de los simpson" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="img/groot.jpg" alt="portada de groot" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="img/soul.jpg" alt="portada de soul" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                      <div class="card-img">
+                        <a href="pages/detalle-pelicula.html">
+                          <img src="img/avatar-portrait.jpg" alt="portada de la pelicula avatar" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev bg-transparent w-aut" href="#peliculasSugeridasCarousel" role="button"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next bg-transparent w-aut" href="#peliculasSugeridasCarousel" role="button"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="text-light">
+      <section class="container" id="banner-oferta">
+        <h2 class="text-light text-center">Elegí tu plan</h2>
+        <div class="row px-3 py-5">
+          <div class="col-md-4 mt-3">
+            <div class="card" data-bs-theme="dark">
+              <div class="card-body text-center text-light">
+                <h5 class="card-title fs-4">Básico</h5>
+                <hr class="text-info fw-bold">
+                <p class="card-text">ARS699<br> Calidad de video buena.<br> Resolución 720p</p>
+                <a href="../pages/error404.html">
+                  <button class="btn btn-indigo" href:">Suscribite ahora</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100" data-bs-theme="dark">
+              <div class="card-body text-center text-light">
+                <h5 class="card-title fs-4">Premium</h5>
+                <hr class="text-warning fw-bold">
+                <p class="card-text fw-bold">ARS1899<br> Calidad de video excelente.<br> Resolución 4K + HDR</p>
+                <a href="../pages/error404.html">
+                  <button class="btn btn-indigo" href:">Suscribite ahora</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-3">
+            <div class="card" data-bs-theme="dark">
+              <div class="card-body text-center text-light">
+                <h5 class="card-title fs-4">Estándar</h5>
+                <hr class="text-info fw-bold">
+                <p class="card-text">ARS1899<br> Calidad de video muy buena.<br> Resolución 1080p</p>
+                <a href="../pages/error404.html">
+                  <button class="btn btn-indigo" href:">Suscribite ahora</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="text-white p-4">
+    <div class="container d-flex mt-4">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <a href="#">
+            <img src="img/Rolling+.svg" alt="logo de rolling plus" class="w-75">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <ul class="list-unstyled">
+            <li>
+              <a href="pages/acerca-de-nosotros.html" class="link-light text-decoration-none">Acerca de Rolling+</a>
+            </li>
+            <li>
+              <a href="pages/contacto.html" class="link-light text-decoration-none">Consultas</a>
+            </li>
+            <li>
+              <a href="pages/error404.html" class="link-light text-decoration-none">Política de privacidad</a>
+            </li>
+            <li>
+              <a href="pages/error404.html" class="link-light text-decoration-none">Dispositivos compatibles</a>
+            </li>
+            <li>
+              <div class="row d-block">
+                <a href="pages/error404.html" class="link-light text-decoration-none">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="pages/error404.html" class="link-light text-decoration-none">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="pages/error404.html" class="link-light text-decoration-none">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <p>Rolling+ is a paid subscription service, its content is subjec to availability. The Rolling+ service is
+            marketed.</p>
+          <p>©Rolling Code. All Rights Reserved.</p>
+          <div class="d-flex flex-column flex-lg-row">
+            <img src="img/google-play-badge-bb.svg" alt="" class="m-2 ms-0 w-75">
+            <img src="img/badge-apple-store.svg" alt="" class="m-2 ms-0 w-75">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let items = document.querySelectorAll('#peliculasSugeridasCarousel .carousel-item')
+    items.forEach((el) => {
+      const minPerSlide = 4
+      let next = el.nextElementSibling
+      for (var i = 1; i < minPerSlide; i++) {
+        if (!next) {
+          // wrap carousel by using first child
+          next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+      }
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- cdn jquery - para la barra de busqueda -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script>
+    $("#boton-buscar").click(function () {
+      $("#barra-busqueda").toggle();
+      $("#input-busqueda").focus();
+    });
+  </script>
+</body>
+
+</html>
